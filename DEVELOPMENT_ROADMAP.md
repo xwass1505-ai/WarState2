@@ -2,7 +2,7 @@
 
 > Future plan + phase log. What exists today is in PROJECT.md.
 
-## v0.4 phases (branch `wip/v0.4`, each phase = green GitHub Actions with real Rojo 7.7.0)
+## v0.4 phases (branch `main`, each phase = green GitHub Actions with real Rojo 7.7.0)
 - [x] **Phase 1 - Static map**: map in the place file, no runtime/PlayerAdded generation, big central island,
       x3 spacing, Terrain water at server start, invisible boundaries, trees/bushes/rocks/dirt paths, bridges, exits.
 - [x] **Phase 2 - UI / Build Menu / Economy**: CIVILIAN / MILITARY / RESEARCH only, wide bottom menu, vertical categories,

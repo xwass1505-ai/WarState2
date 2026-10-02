@@ -1,15 +1,18 @@
-WAR STATE v0.4 SOURCE VALIDATION
+WAR STATE v0.4 VALIDATION
 
 Static map regeneration: PASS
 Static map files: 8
 Static map parts: 972
 
-Python test suite: PASS
-82 tests passed
-5 real-Rojo/Studio-dependent tests are skipped when no real Rojo-built place file is provided.
+REAL Rojo 7.7.0 build: PASS
+Build verification: PASS
 
-The source tree contains the required UI, controllers, country registry, procedural building models,
-WIP economy/production/traffic/railway modules and static map files.
+Automated tests: PASS
+101 tests passed
+The real-place XML tests are executed against the CI-produced Rojo place file.
 
-Real Roblox Studio Play verification has not been performed in this container.
-A final Studio check is therefore still an external verification step, not a claimed completed check.
+Release artifact: PASS
+WarState_READY_BUILD uploaded by GitHub Actions.
+
+Studio Play verification: N/A
+Roblox Studio is not available in the CI/build environment, so RuntimeSelfTest and the full interactive checklist remain an external Studio verification step.

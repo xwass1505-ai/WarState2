@@ -1,6 +1,6 @@
 # WAR STATE - PROJECT.md (LIVE)
 
-**Version 0.4.0 · branch `wip/v0.4` · Rojo 7.7.0 (real `rojo build` in GitHub Actions) · save schema 3.**
+**Version 0.4.0 · branch `main` · Rojo 7.7.0 (real `rojo build` in GitHub Actions) · save schema 3.**
 Status columns: **Code** = implemented in source and covered by automated tests in CI.
 **Studio** = verified in Roblox Studio Play. Studio is not available in the CI / AI build environment,
 so every v0.4 item is **N/A** until it is checked in Studio (`RuntimeSelfTest` prints the result).
@@ -8,7 +8,7 @@ so every v0.4 item is **N/A** until it is checked in Studio (`RuntimeSelfTest` p
 ## Build pipeline (source of truth = GitHub)
 ```
 GitHub push -> GitHub Actions (.github/workflows/build.yml, windows-latest)
-  -> unpack rojo-7.7.0-windows-x86_64.zip (committed) + prebuild: tools/gen_static_map.py (static map sources)
+  -> download official rojo-7.7.0-windows-x86_64.zip + unpack + prebuild: tools/gen_static_map.py (static map sources)
   -> rojo --version (must be 7.7.0)
   -> rojo build default.project.json -o build/WarState.rbxlx      (REAL Rojo, fresh every run)
   -> tools/verify_build.py (fresh file, required instances: static map, remotes, v0.4 systems/screens)
@@ -123,8 +123,7 @@ Power, Shortage}, Economy{Cycle, LastIncome, LastExpense, LastNet}, Research. Mi
 * Terrain water is filled at server start (Rojo cannot serialize terrain voxels).
 * No DataStore session locking (last write wins). Construction / production advance only while the owner is online.
 * Flags are emoji fallbacks (no verified image ids).
-* `.github/workflows/restore-v04-wip.yml` (one-time WIP restore helper) still triggers on push and fails harmlessly
-  because the WIP ZIP was removed; delete it in the GitHub UI (the connected token has no `workflow` scope).
+* Studio Play verification is not performed by CI; use the checklist below for the final external verification.
 
 ## Studio checklist (v0.4)
 Play -> `[WarState] Server ready` + `[WarState SelfTest] PASS` -> create country -> claim plot -> HUD shows flag / name /

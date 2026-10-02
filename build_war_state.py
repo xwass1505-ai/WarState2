@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""WAR STATE build runner (v0.3).
+"""WAR STATE build runner (v0.4).
 
     python build_war_state.py                 # generate static map + tests + REAL rojo build
     python build_war_state.py --serve         # ... then `rojo serve` for live sync into Studio
@@ -15,7 +15,7 @@ import argparse, json, shutil, subprocess, sys, unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-GENERATOR_VERSION = "0.3.0"
+GENERATOR_VERSION = "0.4.0"
 sys.path.insert(0, str(ROOT / "tools"))
 
 
