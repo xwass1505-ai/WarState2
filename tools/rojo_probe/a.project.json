@@ -1,0 +1,1 @@
+{"name":"ProbeA","tree":{"$className":"DataModel","Workspace":{"$className":"Workspace","Terrain":{"$className":"Terrain","$properties":{"WaterColor":{"Color3":[0.2,0.5,0.7]},"WaterWaveSize":0.15,"WaterTransparency":0.3}},"Map":{"$path":"a_map"}}}}

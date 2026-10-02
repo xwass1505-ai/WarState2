@@ -1,0 +1,6 @@
+{
+  "name": "WarStateBridge",
+  "tree": {
+    "$path": "plugin/WarStateBridge.server.luau"
+  }
+}

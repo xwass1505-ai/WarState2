@@ -1,0 +1,23 @@
+{
+  "Branches": [
+    {
+      "Id": "USSR",
+      "DisplayName": "USSR / Russia",
+      "Description": "Soviet / Russian equipment line. Research tree planned.",
+      "Active": true
+    },
+    {
+      "Id": "USA",
+      "DisplayName": "USA",
+      "Description": "American equipment line. Research tree planned.",
+      "Active": true
+    },
+    {
+      "Id": "Germany",
+      "DisplayName": "Germany",
+      "Description": "German equipment line. Research tree planned.",
+      "Active": true
+    }
+  ],
+  "ResearchSystemStatus": "PLANNED"
+}

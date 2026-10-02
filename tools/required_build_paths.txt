@@ -1,0 +1,21 @@
+# Extra instance paths that MUST exist in the place produced by the real `rojo build` (tools/verify_build.py).
+# Static map (Phase 1): present in the place before any player joins.
+Workspace/Terrain
+Workspace/Map/CentralIsland
+Workspace/Map/CentralIsland/Ground
+Workspace/Map/CentralIsland/Trees
+Workspace/Map/CentralIsland/Bushes
+Workspace/Map/CentralIsland/Rocks
+Workspace/Map/CentralIsland/Paths
+Workspace/Map/CentralIsland/LobbySpawn
+Workspace/Map/Boundaries
+Workspace/Map/Plots/Plot_1/Ground
+Workspace/Map/Plots/Plot_1/Exit/Bridge
+Workspace/Map/Plots/Plot_1/OwnerSign
+Workspace/Map/Plots/Plot_2/Ground
+Workspace/Map/Plots/Plot_3/Ground
+Workspace/Map/Plots/Plot_4/Ground
+Workspace/Map/Plots/Plot_5/Ground
+Workspace/Map/Plots/Plot_6/Ground
+Workspace/Map/Plots/Plot_6/Exit/Bridge
+

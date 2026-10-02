@@ -1,0 +1,39 @@
+{
+  "TileSize": 2,
+  "RoadWidth": 1.6,
+  "CurbWidth": 0.2,
+  "CurbHeight": 0.16,
+  "AsphaltHeight": 0.08,
+  "AutoConnect": true,
+  "Colors": {
+    "Asphalt": [
+      124,
+      128,
+      134
+    ],
+    "Curb": [
+      212,
+      215,
+      219
+    ],
+    "Marking": [
+      242,
+      242,
+      238
+    ]
+  },
+  "Types": [
+    {
+      "Id": "Straight",
+      "DisplayName": "Straight Road",
+      "Openings": [
+        "N",
+        "S"
+      ],
+      "Active": true,
+      "Cost": {
+        "Treasury": 0
+      }
+    }
+  ]
+}

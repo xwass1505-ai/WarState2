@@ -1,0 +1,79 @@
+{
+  "Categories": [
+    {
+      "Id": "CIVILIAN",
+      "DisplayName": "Civilian",
+      "Accent": [
+        72,
+        178,
+        112
+      ],
+      "Groups": [
+        "Roads",
+        "Residential",
+        "Business",
+        "Utilities",
+        "Resources",
+        "Industry",
+        "Storage",
+        "Transport"
+      ]
+    },
+    {
+      "Id": "MILITARY",
+      "DisplayName": "Military",
+      "Accent": [
+        222,
+        92,
+        92
+      ],
+      "Groups": [
+        "Production",
+        "Army",
+        "Defense",
+        "Air",
+        "Logistics"
+      ]
+    },
+    {
+      "Id": "RESEARCH",
+      "DisplayName": "Research",
+      "Accent": [
+        128,
+        104,
+        226
+      ],
+      "Groups": [
+        "Research"
+      ]
+    }
+  ],
+  "Groups": {
+    "Roads": "Roads",
+    "Residential": "Houses",
+    "Business": "Business",
+    "Utilities": "Water & Power",
+    "Resources": "Resources",
+    "Industry": "Industry",
+    "Storage": "Storage",
+    "Transport": "Railway",
+    "Production": "Production",
+    "Army": "Army",
+    "Defense": "Air Defense",
+    "Air": "Air",
+    "Logistics": "Storage",
+    "Research": "Research"
+  },
+  "DrawTools": [
+    {
+      "Kind": "Road",
+      "Id": "Straight",
+      "Group": "Roads"
+    },
+    {
+      "Kind": "Rail",
+      "Id": "RailTrack",
+      "Group": "Transport"
+    }
+  ]
+}

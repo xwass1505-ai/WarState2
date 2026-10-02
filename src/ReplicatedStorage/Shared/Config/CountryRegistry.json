@@ -1,0 +1,1776 @@
+{
+ "RegistryVersion": 1,
+ "Continents": [
+  "Europe",
+  "Asia",
+  "Africa",
+  "North America",
+  "South America",
+  "Oceania"
+ ],
+ "ExpectedContinentCounts": {
+  "Europe": 45,
+  "Asia": 47,
+  "Africa": 54,
+  "North America": 23,
+  "South America": 12,
+  "Oceania": 14
+ },
+ "Countries": [
+  {
+   "Id": "AL",
+   "Iso2": "AL",
+   "DisplayNameEN": "Albania",
+   "DisplayNameRU": "Албания",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇱"
+  },
+  {
+   "Id": "AD",
+   "Iso2": "AD",
+   "DisplayNameEN": "Andorra",
+   "DisplayNameRU": "Андорра",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇩"
+  },
+  {
+   "Id": "AT",
+   "Iso2": "AT",
+   "DisplayNameEN": "Austria",
+   "DisplayNameRU": "Австрия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇹"
+  },
+  {
+   "Id": "BY",
+   "Iso2": "BY",
+   "DisplayNameEN": "Belarus",
+   "DisplayNameRU": "Беларусь",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇾"
+  },
+  {
+   "Id": "BE",
+   "Iso2": "BE",
+   "DisplayNameEN": "Belgium",
+   "DisplayNameRU": "Бельгия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇪"
+  },
+  {
+   "Id": "BA",
+   "Iso2": "BA",
+   "DisplayNameEN": "Bosnia and Herzegovina",
+   "DisplayNameRU": "Босния и Герцеговина",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇦"
+  },
+  {
+   "Id": "BG",
+   "Iso2": "BG",
+   "DisplayNameEN": "Bulgaria",
+   "DisplayNameRU": "Болгария",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇬"
+  },
+  {
+   "Id": "HR",
+   "Iso2": "HR",
+   "DisplayNameEN": "Croatia",
+   "DisplayNameRU": "Хорватия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇭🇷"
+  },
+  {
+   "Id": "CY",
+   "Iso2": "CY",
+   "DisplayNameEN": "Cyprus",
+   "DisplayNameRU": "Кипр",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇾"
+  },
+  {
+   "Id": "CZ",
+   "Iso2": "CZ",
+   "DisplayNameEN": "Czechia",
+   "DisplayNameRU": "Чехия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇿"
+  },
+  {
+   "Id": "DK",
+   "Iso2": "DK",
+   "DisplayNameEN": "Denmark",
+   "DisplayNameRU": "Дания",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇩🇰"
+  },
+  {
+   "Id": "EE",
+   "Iso2": "EE",
+   "DisplayNameEN": "Estonia",
+   "DisplayNameRU": "Эстония",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇪🇪"
+  },
+  {
+   "Id": "FI",
+   "Iso2": "FI",
+   "DisplayNameEN": "Finland",
+   "DisplayNameRU": "Финляндия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇫🇮"
+  },
+  {
+   "Id": "FR",
+   "Iso2": "FR",
+   "DisplayNameEN": "France",
+   "DisplayNameRU": "Франция",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇫🇷"
+  },
+  {
+   "Id": "DE",
+   "Iso2": "DE",
+   "DisplayNameEN": "Germany",
+   "DisplayNameRU": "Германия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇩🇪"
+  },
+  {
+   "Id": "GR",
+   "Iso2": "GR",
+   "DisplayNameEN": "Greece",
+   "DisplayNameRU": "Греция",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇷"
+  },
+  {
+   "Id": "HU",
+   "Iso2": "HU",
+   "DisplayNameEN": "Hungary",
+   "DisplayNameRU": "Венгрия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇭🇺"
+  },
+  {
+   "Id": "IS",
+   "Iso2": "IS",
+   "DisplayNameEN": "Iceland",
+   "DisplayNameRU": "Исландия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇸"
+  },
+  {
+   "Id": "IE",
+   "Iso2": "IE",
+   "DisplayNameEN": "Ireland",
+   "DisplayNameRU": "Ирландия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇪"
+  },
+  {
+   "Id": "IT",
+   "Iso2": "IT",
+   "DisplayNameEN": "Italy",
+   "DisplayNameRU": "Италия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇹"
+  },
+  {
+   "Id": "LV",
+   "Iso2": "LV",
+   "DisplayNameEN": "Latvia",
+   "DisplayNameRU": "Латвия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇻"
+  },
+  {
+   "Id": "LI",
+   "Iso2": "LI",
+   "DisplayNameEN": "Liechtenstein",
+   "DisplayNameRU": "Лихтенштейн",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇮"
+  },
+  {
+   "Id": "LT",
+   "Iso2": "LT",
+   "DisplayNameEN": "Lithuania",
+   "DisplayNameRU": "Литва",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇹"
+  },
+  {
+   "Id": "LU",
+   "Iso2": "LU",
+   "DisplayNameEN": "Luxembourg",
+   "DisplayNameRU": "Люксембург",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇺"
+  },
+  {
+   "Id": "MT",
+   "Iso2": "MT",
+   "DisplayNameEN": "Malta",
+   "DisplayNameRU": "Мальта",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇹"
+  },
+  {
+   "Id": "MD",
+   "Iso2": "MD",
+   "DisplayNameEN": "Moldova",
+   "DisplayNameRU": "Молдова",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇩"
+  },
+  {
+   "Id": "MC",
+   "Iso2": "MC",
+   "DisplayNameEN": "Monaco",
+   "DisplayNameRU": "Монако",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇨"
+  },
+  {
+   "Id": "ME",
+   "Iso2": "ME",
+   "DisplayNameEN": "Montenegro",
+   "DisplayNameRU": "Черногория",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇪"
+  },
+  {
+   "Id": "NL",
+   "Iso2": "NL",
+   "DisplayNameEN": "Netherlands",
+   "DisplayNameRU": "Нидерланды",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇱"
+  },
+  {
+   "Id": "MK",
+   "Iso2": "MK",
+   "DisplayNameEN": "North Macedonia",
+   "DisplayNameRU": "Северная Македония",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇰"
+  },
+  {
+   "Id": "NO",
+   "Iso2": "NO",
+   "DisplayNameEN": "Norway",
+   "DisplayNameRU": "Норвегия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇴"
+  },
+  {
+   "Id": "PL",
+   "Iso2": "PL",
+   "DisplayNameEN": "Poland",
+   "DisplayNameRU": "Польша",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇱"
+  },
+  {
+   "Id": "PT",
+   "Iso2": "PT",
+   "DisplayNameEN": "Portugal",
+   "DisplayNameRU": "Португалия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇹"
+  },
+  {
+   "Id": "RO",
+   "Iso2": "RO",
+   "DisplayNameEN": "Romania",
+   "DisplayNameRU": "Румыния",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇷🇴"
+  },
+  {
+   "Id": "RU",
+   "Iso2": "RU",
+   "DisplayNameEN": "Russia",
+   "DisplayNameRU": "Россия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇷🇺"
+  },
+  {
+   "Id": "SM",
+   "Iso2": "SM",
+   "DisplayNameEN": "San Marino",
+   "DisplayNameRU": "Сан-Марино",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇲"
+  },
+  {
+   "Id": "RS",
+   "Iso2": "RS",
+   "DisplayNameEN": "Serbia",
+   "DisplayNameRU": "Сербия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇷🇸"
+  },
+  {
+   "Id": "SK",
+   "Iso2": "SK",
+   "DisplayNameEN": "Slovakia",
+   "DisplayNameRU": "Словакия",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇰"
+  },
+  {
+   "Id": "SI",
+   "Iso2": "SI",
+   "DisplayNameEN": "Slovenia",
+   "DisplayNameRU": "Словения",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇮"
+  },
+  {
+   "Id": "ES",
+   "Iso2": "ES",
+   "DisplayNameEN": "Spain",
+   "DisplayNameRU": "Испания",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇪🇸"
+  },
+  {
+   "Id": "SE",
+   "Iso2": "SE",
+   "DisplayNameEN": "Sweden",
+   "DisplayNameRU": "Швеция",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇪"
+  },
+  {
+   "Id": "CH",
+   "Iso2": "CH",
+   "DisplayNameEN": "Switzerland",
+   "DisplayNameRU": "Швейцария",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇭"
+  },
+  {
+   "Id": "UA",
+   "Iso2": "UA",
+   "DisplayNameEN": "Ukraine",
+   "DisplayNameRU": "Украина",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇺🇦"
+  },
+  {
+   "Id": "GB",
+   "Iso2": "GB",
+   "DisplayNameEN": "United Kingdom",
+   "DisplayNameRU": "Великобритания",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇧"
+  },
+  {
+   "Id": "VA",
+   "Iso2": "VA",
+   "DisplayNameEN": "Holy See (Vatican City)",
+   "DisplayNameRU": "Ватикан",
+   "Continent": "Europe",
+   "FlagAsset": "",
+   "EmojiFallback": "🇻🇦"
+  },
+  {
+   "Id": "AF",
+   "Iso2": "AF",
+   "DisplayNameEN": "Afghanistan",
+   "DisplayNameRU": "Афганистан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇫"
+  },
+  {
+   "Id": "AM",
+   "Iso2": "AM",
+   "DisplayNameEN": "Armenia",
+   "DisplayNameRU": "Армения",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇲"
+  },
+  {
+   "Id": "AZ",
+   "Iso2": "AZ",
+   "DisplayNameEN": "Azerbaijan",
+   "DisplayNameRU": "Азербайджан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇿"
+  },
+  {
+   "Id": "BH",
+   "Iso2": "BH",
+   "DisplayNameEN": "Bahrain",
+   "DisplayNameRU": "Бахрейн",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇭"
+  },
+  {
+   "Id": "BD",
+   "Iso2": "BD",
+   "DisplayNameEN": "Bangladesh",
+   "DisplayNameRU": "Бангладеш",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇩"
+  },
+  {
+   "Id": "BT",
+   "Iso2": "BT",
+   "DisplayNameEN": "Bhutan",
+   "DisplayNameRU": "Бутан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇹"
+  },
+  {
+   "Id": "BN",
+   "Iso2": "BN",
+   "DisplayNameEN": "Brunei",
+   "DisplayNameRU": "Бруней",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇳"
+  },
+  {
+   "Id": "KH",
+   "Iso2": "KH",
+   "DisplayNameEN": "Cambodia",
+   "DisplayNameRU": "Камбоджа",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇭"
+  },
+  {
+   "Id": "CN",
+   "Iso2": "CN",
+   "DisplayNameEN": "China",
+   "DisplayNameRU": "Китай",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇳"
+  },
+  {
+   "Id": "GE",
+   "Iso2": "GE",
+   "DisplayNameEN": "Georgia",
+   "DisplayNameRU": "Грузия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇪"
+  },
+  {
+   "Id": "IN",
+   "Iso2": "IN",
+   "DisplayNameEN": "India",
+   "DisplayNameRU": "Индия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇳"
+  },
+  {
+   "Id": "ID",
+   "Iso2": "ID",
+   "DisplayNameEN": "Indonesia",
+   "DisplayNameRU": "Индонезия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇩"
+  },
+  {
+   "Id": "IR",
+   "Iso2": "IR",
+   "DisplayNameEN": "Iran",
+   "DisplayNameRU": "Иран",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇷"
+  },
+  {
+   "Id": "IQ",
+   "Iso2": "IQ",
+   "DisplayNameEN": "Iraq",
+   "DisplayNameRU": "Ирак",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇶"
+  },
+  {
+   "Id": "IL",
+   "Iso2": "IL",
+   "DisplayNameEN": "Israel",
+   "DisplayNameRU": "Израиль",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇮🇱"
+  },
+  {
+   "Id": "JP",
+   "Iso2": "JP",
+   "DisplayNameEN": "Japan",
+   "DisplayNameRU": "Япония",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇯🇵"
+  },
+  {
+   "Id": "JO",
+   "Iso2": "JO",
+   "DisplayNameEN": "Jordan",
+   "DisplayNameRU": "Иордания",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇯🇴"
+  },
+  {
+   "Id": "KZ",
+   "Iso2": "KZ",
+   "DisplayNameEN": "Kazakhstan",
+   "DisplayNameRU": "Казахстан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇿"
+  },
+  {
+   "Id": "KW",
+   "Iso2": "KW",
+   "DisplayNameEN": "Kuwait",
+   "DisplayNameRU": "Кувейт",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇼"
+  },
+  {
+   "Id": "KG",
+   "Iso2": "KG",
+   "DisplayNameEN": "Kyrgyzstan",
+   "DisplayNameRU": "Киргизия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇬"
+  },
+  {
+   "Id": "LA",
+   "Iso2": "LA",
+   "DisplayNameEN": "Laos",
+   "DisplayNameRU": "Лаос",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇦"
+  },
+  {
+   "Id": "LB",
+   "Iso2": "LB",
+   "DisplayNameEN": "Lebanon",
+   "DisplayNameRU": "Ливан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇧"
+  },
+  {
+   "Id": "MY",
+   "Iso2": "MY",
+   "DisplayNameEN": "Malaysia",
+   "DisplayNameRU": "Малайзия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇾"
+  },
+  {
+   "Id": "MV",
+   "Iso2": "MV",
+   "DisplayNameEN": "Maldives",
+   "DisplayNameRU": "Мальдивы",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇻"
+  },
+  {
+   "Id": "MN",
+   "Iso2": "MN",
+   "DisplayNameEN": "Mongolia",
+   "DisplayNameRU": "Монголия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇳"
+  },
+  {
+   "Id": "MM",
+   "Iso2": "MM",
+   "DisplayNameEN": "Myanmar",
+   "DisplayNameRU": "Мьянма",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇲"
+  },
+  {
+   "Id": "NP",
+   "Iso2": "NP",
+   "DisplayNameEN": "Nepal",
+   "DisplayNameRU": "Непал",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇵"
+  },
+  {
+   "Id": "KP",
+   "Iso2": "KP",
+   "DisplayNameEN": "North Korea",
+   "DisplayNameRU": "КНДР",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇵"
+  },
+  {
+   "Id": "OM",
+   "Iso2": "OM",
+   "DisplayNameEN": "Oman",
+   "DisplayNameRU": "Оман",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇴🇲"
+  },
+  {
+   "Id": "PK",
+   "Iso2": "PK",
+   "DisplayNameEN": "Pakistan",
+   "DisplayNameRU": "Пакистан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇰"
+  },
+  {
+   "Id": "PS",
+   "Iso2": "PS",
+   "DisplayNameEN": "State of Palestine",
+   "DisplayNameRU": "Государство Палестина",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇸"
+  },
+  {
+   "Id": "PH",
+   "Iso2": "PH",
+   "DisplayNameEN": "Philippines",
+   "DisplayNameRU": "Филиппины",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇭"
+  },
+  {
+   "Id": "QA",
+   "Iso2": "QA",
+   "DisplayNameEN": "Qatar",
+   "DisplayNameRU": "Катар",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇶🇦"
+  },
+  {
+   "Id": "SA",
+   "Iso2": "SA",
+   "DisplayNameEN": "Saudi Arabia",
+   "DisplayNameRU": "Саудовская Аравия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇦"
+  },
+  {
+   "Id": "SG",
+   "Iso2": "SG",
+   "DisplayNameEN": "Singapore",
+   "DisplayNameRU": "Сингапур",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇬"
+  },
+  {
+   "Id": "KR",
+   "Iso2": "KR",
+   "DisplayNameEN": "South Korea",
+   "DisplayNameRU": "Республика Корея",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇷"
+  },
+  {
+   "Id": "LK",
+   "Iso2": "LK",
+   "DisplayNameEN": "Sri Lanka",
+   "DisplayNameRU": "Шри-Ланка",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇰"
+  },
+  {
+   "Id": "SY",
+   "Iso2": "SY",
+   "DisplayNameEN": "Syria",
+   "DisplayNameRU": "Сирия",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇾"
+  },
+  {
+   "Id": "TJ",
+   "Iso2": "TJ",
+   "DisplayNameEN": "Tajikistan",
+   "DisplayNameRU": "Таджикистан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇯"
+  },
+  {
+   "Id": "TH",
+   "Iso2": "TH",
+   "DisplayNameEN": "Thailand",
+   "DisplayNameRU": "Таиланд",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇭"
+  },
+  {
+   "Id": "TL",
+   "Iso2": "TL",
+   "DisplayNameEN": "Timor-Leste",
+   "DisplayNameRU": "Восточный Тимор",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇱"
+  },
+  {
+   "Id": "TR",
+   "Iso2": "TR",
+   "DisplayNameEN": "Turkey",
+   "DisplayNameRU": "Турция",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇷"
+  },
+  {
+   "Id": "TM",
+   "Iso2": "TM",
+   "DisplayNameEN": "Turkmenistan",
+   "DisplayNameRU": "Туркменистан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇲"
+  },
+  {
+   "Id": "AE",
+   "Iso2": "AE",
+   "DisplayNameEN": "United Arab Emirates",
+   "DisplayNameRU": "ОАЭ",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇪"
+  },
+  {
+   "Id": "UZ",
+   "Iso2": "UZ",
+   "DisplayNameEN": "Uzbekistan",
+   "DisplayNameRU": "Узбекистан",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇺🇿"
+  },
+  {
+   "Id": "VN",
+   "Iso2": "VN",
+   "DisplayNameEN": "Vietnam",
+   "DisplayNameRU": "Вьетнам",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇻🇳"
+  },
+  {
+   "Id": "YE",
+   "Iso2": "YE",
+   "DisplayNameEN": "Yemen",
+   "DisplayNameRU": "Йемен",
+   "Continent": "Asia",
+   "FlagAsset": "",
+   "EmojiFallback": "🇾🇪"
+  },
+  {
+   "Id": "DZ",
+   "Iso2": "DZ",
+   "DisplayNameEN": "Algeria",
+   "DisplayNameRU": "Алжир",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇩🇿"
+  },
+  {
+   "Id": "AO",
+   "Iso2": "AO",
+   "DisplayNameEN": "Angola",
+   "DisplayNameRU": "Ангола",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇴"
+  },
+  {
+   "Id": "BJ",
+   "Iso2": "BJ",
+   "DisplayNameEN": "Benin",
+   "DisplayNameRU": "Бенин",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇯"
+  },
+  {
+   "Id": "BW",
+   "Iso2": "BW",
+   "DisplayNameEN": "Botswana",
+   "DisplayNameRU": "Ботсвана",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇼"
+  },
+  {
+   "Id": "BF",
+   "Iso2": "BF",
+   "DisplayNameEN": "Burkina Faso",
+   "DisplayNameRU": "Буркина-Фасо",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇫"
+  },
+  {
+   "Id": "BI",
+   "Iso2": "BI",
+   "DisplayNameEN": "Burundi",
+   "DisplayNameRU": "Бурунди",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇮"
+  },
+  {
+   "Id": "CV",
+   "Iso2": "CV",
+   "DisplayNameEN": "Cabo Verde",
+   "DisplayNameRU": "Кабо-Верде",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇻"
+  },
+  {
+   "Id": "CM",
+   "Iso2": "CM",
+   "DisplayNameEN": "Cameroon",
+   "DisplayNameRU": "Камерун",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇲"
+  },
+  {
+   "Id": "CF",
+   "Iso2": "CF",
+   "DisplayNameEN": "Central African Republic",
+   "DisplayNameRU": "Центральноафриканская Республика",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇫"
+  },
+  {
+   "Id": "TD",
+   "Iso2": "TD",
+   "DisplayNameEN": "Chad",
+   "DisplayNameRU": "Чад",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇩"
+  },
+  {
+   "Id": "KM",
+   "Iso2": "KM",
+   "DisplayNameEN": "Comoros",
+   "DisplayNameRU": "Коморы",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇲"
+  },
+  {
+   "Id": "CG",
+   "Iso2": "CG",
+   "DisplayNameEN": "Republic of the Congo",
+   "DisplayNameRU": "Республика Конго",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇬"
+  },
+  {
+   "Id": "CD",
+   "Iso2": "CD",
+   "DisplayNameEN": "DR Congo",
+   "DisplayNameRU": "ДР Конго",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇩"
+  },
+  {
+   "Id": "CI",
+   "Iso2": "CI",
+   "DisplayNameEN": "Cote d'Ivoire",
+   "DisplayNameRU": "Кот-д'Ивуар",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇮"
+  },
+  {
+   "Id": "DJ",
+   "Iso2": "DJ",
+   "DisplayNameEN": "Djibouti",
+   "DisplayNameRU": "Джибути",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇩🇯"
+  },
+  {
+   "Id": "EG",
+   "Iso2": "EG",
+   "DisplayNameEN": "Egypt",
+   "DisplayNameRU": "Египет",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇪🇬"
+  },
+  {
+   "Id": "GQ",
+   "Iso2": "GQ",
+   "DisplayNameEN": "Equatorial Guinea",
+   "DisplayNameRU": "Экваториальная Гвинея",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇶"
+  },
+  {
+   "Id": "ER",
+   "Iso2": "ER",
+   "DisplayNameEN": "Eritrea",
+   "DisplayNameRU": "Эритрея",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇪🇷"
+  },
+  {
+   "Id": "SZ",
+   "Iso2": "SZ",
+   "DisplayNameEN": "Eswatini",
+   "DisplayNameRU": "Эсватини",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇿"
+  },
+  {
+   "Id": "ET",
+   "Iso2": "ET",
+   "DisplayNameEN": "Ethiopia",
+   "DisplayNameRU": "Эфиопия",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇪🇹"
+  },
+  {
+   "Id": "GA",
+   "Iso2": "GA",
+   "DisplayNameEN": "Gabon",
+   "DisplayNameRU": "Габон",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇦"
+  },
+  {
+   "Id": "GM",
+   "Iso2": "GM",
+   "DisplayNameEN": "Gambia",
+   "DisplayNameRU": "Гамбия",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇲"
+  },
+  {
+   "Id": "GH",
+   "Iso2": "GH",
+   "DisplayNameEN": "Ghana",
+   "DisplayNameRU": "Гана",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇭"
+  },
+  {
+   "Id": "GN",
+   "Iso2": "GN",
+   "DisplayNameEN": "Guinea",
+   "DisplayNameRU": "Гвинея",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇳"
+  },
+  {
+   "Id": "GW",
+   "Iso2": "GW",
+   "DisplayNameEN": "Guinea-Bissau",
+   "DisplayNameRU": "Гвинея-Бисау",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇼"
+  },
+  {
+   "Id": "KE",
+   "Iso2": "KE",
+   "DisplayNameEN": "Kenya",
+   "DisplayNameRU": "Кения",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇪"
+  },
+  {
+   "Id": "LS",
+   "Iso2": "LS",
+   "DisplayNameEN": "Lesotho",
+   "DisplayNameRU": "Лесото",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇸"
+  },
+  {
+   "Id": "LR",
+   "Iso2": "LR",
+   "DisplayNameEN": "Liberia",
+   "DisplayNameRU": "Либерия",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇷"
+  },
+  {
+   "Id": "LY",
+   "Iso2": "LY",
+   "DisplayNameEN": "Libya",
+   "DisplayNameRU": "Ливия",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇾"
+  },
+  {
+   "Id": "MG",
+   "Iso2": "MG",
+   "DisplayNameEN": "Madagascar",
+   "DisplayNameRU": "Мадагаскар",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇬"
+  },
+  {
+   "Id": "MW",
+   "Iso2": "MW",
+   "DisplayNameEN": "Malawi",
+   "DisplayNameRU": "Малави",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇼"
+  },
+  {
+   "Id": "ML",
+   "Iso2": "ML",
+   "DisplayNameEN": "Mali",
+   "DisplayNameRU": "Мали",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇱"
+  },
+  {
+   "Id": "MR",
+   "Iso2": "MR",
+   "DisplayNameEN": "Mauritania",
+   "DisplayNameRU": "Мавритания",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇷"
+  },
+  {
+   "Id": "MU",
+   "Iso2": "MU",
+   "DisplayNameEN": "Mauritius",
+   "DisplayNameRU": "Маврикий",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇺"
+  },
+  {
+   "Id": "MA",
+   "Iso2": "MA",
+   "DisplayNameEN": "Morocco",
+   "DisplayNameRU": "Марокко",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇦"
+  },
+  {
+   "Id": "MZ",
+   "Iso2": "MZ",
+   "DisplayNameEN": "Mozambique",
+   "DisplayNameRU": "Мозамбик",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇿"
+  },
+  {
+   "Id": "NA",
+   "Iso2": "NA",
+   "DisplayNameEN": "Namibia",
+   "DisplayNameRU": "Намибия",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇦"
+  },
+  {
+   "Id": "NE",
+   "Iso2": "NE",
+   "DisplayNameEN": "Niger",
+   "DisplayNameRU": "Нигер",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇪"
+  },
+  {
+   "Id": "NG",
+   "Iso2": "NG",
+   "DisplayNameEN": "Nigeria",
+   "DisplayNameRU": "Нигерия",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇬"
+  },
+  {
+   "Id": "RW",
+   "Iso2": "RW",
+   "DisplayNameEN": "Rwanda",
+   "DisplayNameRU": "Руанда",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇷🇼"
+  },
+  {
+   "Id": "ST",
+   "Iso2": "ST",
+   "DisplayNameEN": "Sao Tome and Principe",
+   "DisplayNameRU": "Сан-Томе и Принсипи",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇹"
+  },
+  {
+   "Id": "SN",
+   "Iso2": "SN",
+   "DisplayNameEN": "Senegal",
+   "DisplayNameRU": "Сенегал",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇳"
+  },
+  {
+   "Id": "SC",
+   "Iso2": "SC",
+   "DisplayNameEN": "Seychelles",
+   "DisplayNameRU": "Сейшельские Острова",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇨"
+  },
+  {
+   "Id": "SL",
+   "Iso2": "SL",
+   "DisplayNameEN": "Sierra Leone",
+   "DisplayNameRU": "Сьерра-Леоне",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇱"
+  },
+  {
+   "Id": "SO",
+   "Iso2": "SO",
+   "DisplayNameEN": "Somalia",
+   "DisplayNameRU": "Сомали",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇴"
+  },
+  {
+   "Id": "ZA",
+   "Iso2": "ZA",
+   "DisplayNameEN": "South Africa",
+   "DisplayNameRU": "ЮАР",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇿🇦"
+  },
+  {
+   "Id": "SS",
+   "Iso2": "SS",
+   "DisplayNameEN": "South Sudan",
+   "DisplayNameRU": "Южный Судан",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇸"
+  },
+  {
+   "Id": "SD",
+   "Iso2": "SD",
+   "DisplayNameEN": "Sudan",
+   "DisplayNameRU": "Судан",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇩"
+  },
+  {
+   "Id": "TZ",
+   "Iso2": "TZ",
+   "DisplayNameEN": "Tanzania",
+   "DisplayNameRU": "Танзания",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇿"
+  },
+  {
+   "Id": "TG",
+   "Iso2": "TG",
+   "DisplayNameEN": "Togo",
+   "DisplayNameRU": "Того",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇬"
+  },
+  {
+   "Id": "TN",
+   "Iso2": "TN",
+   "DisplayNameEN": "Tunisia",
+   "DisplayNameRU": "Тунис",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇳"
+  },
+  {
+   "Id": "UG",
+   "Iso2": "UG",
+   "DisplayNameEN": "Uganda",
+   "DisplayNameRU": "Уганда",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇺🇬"
+  },
+  {
+   "Id": "ZM",
+   "Iso2": "ZM",
+   "DisplayNameEN": "Zambia",
+   "DisplayNameRU": "Замбия",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇿🇲"
+  },
+  {
+   "Id": "ZW",
+   "Iso2": "ZW",
+   "DisplayNameEN": "Zimbabwe",
+   "DisplayNameRU": "Зимбабве",
+   "Continent": "Africa",
+   "FlagAsset": "",
+   "EmojiFallback": "🇿🇼"
+  },
+  {
+   "Id": "AG",
+   "Iso2": "AG",
+   "DisplayNameEN": "Antigua and Barbuda",
+   "DisplayNameRU": "Антигуа и Барбуда",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇬"
+  },
+  {
+   "Id": "BS",
+   "Iso2": "BS",
+   "DisplayNameEN": "Bahamas",
+   "DisplayNameRU": "Багамские Острова",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇸"
+  },
+  {
+   "Id": "BB",
+   "Iso2": "BB",
+   "DisplayNameEN": "Barbados",
+   "DisplayNameRU": "Барбадос",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇧"
+  },
+  {
+   "Id": "BZ",
+   "Iso2": "BZ",
+   "DisplayNameEN": "Belize",
+   "DisplayNameRU": "Белиз",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇿"
+  },
+  {
+   "Id": "CA",
+   "Iso2": "CA",
+   "DisplayNameEN": "Canada",
+   "DisplayNameRU": "Канада",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇦"
+  },
+  {
+   "Id": "CR",
+   "Iso2": "CR",
+   "DisplayNameEN": "Costa Rica",
+   "DisplayNameRU": "Коста-Рика",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇷"
+  },
+  {
+   "Id": "CU",
+   "Iso2": "CU",
+   "DisplayNameEN": "Cuba",
+   "DisplayNameRU": "Куба",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇺"
+  },
+  {
+   "Id": "DM",
+   "Iso2": "DM",
+   "DisplayNameEN": "Dominica",
+   "DisplayNameRU": "Доминика",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇩🇲"
+  },
+  {
+   "Id": "DO",
+   "Iso2": "DO",
+   "DisplayNameEN": "Dominican Republic",
+   "DisplayNameRU": "Доминиканская Республика",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇩🇴"
+  },
+  {
+   "Id": "SV",
+   "Iso2": "SV",
+   "DisplayNameEN": "El Salvador",
+   "DisplayNameRU": "Сальвадор",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇻"
+  },
+  {
+   "Id": "GD",
+   "Iso2": "GD",
+   "DisplayNameEN": "Grenada",
+   "DisplayNameRU": "Гренада",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇩"
+  },
+  {
+   "Id": "GT",
+   "Iso2": "GT",
+   "DisplayNameEN": "Guatemala",
+   "DisplayNameRU": "Гватемала",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇹"
+  },
+  {
+   "Id": "HT",
+   "Iso2": "HT",
+   "DisplayNameEN": "Haiti",
+   "DisplayNameRU": "Гаити",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇭🇹"
+  },
+  {
+   "Id": "HN",
+   "Iso2": "HN",
+   "DisplayNameEN": "Honduras",
+   "DisplayNameRU": "Гондурас",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇭🇳"
+  },
+  {
+   "Id": "JM",
+   "Iso2": "JM",
+   "DisplayNameEN": "Jamaica",
+   "DisplayNameRU": "Ямайка",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇯🇲"
+  },
+  {
+   "Id": "MX",
+   "Iso2": "MX",
+   "DisplayNameEN": "Mexico",
+   "DisplayNameRU": "Мексика",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇽"
+  },
+  {
+   "Id": "NI",
+   "Iso2": "NI",
+   "DisplayNameEN": "Nicaragua",
+   "DisplayNameRU": "Никарагуа",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇮"
+  },
+  {
+   "Id": "PA",
+   "Iso2": "PA",
+   "DisplayNameEN": "Panama",
+   "DisplayNameRU": "Панама",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇦"
+  },
+  {
+   "Id": "KN",
+   "Iso2": "KN",
+   "DisplayNameEN": "Saint Kitts and Nevis",
+   "DisplayNameRU": "Сент-Китс и Невис",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇳"
+  },
+  {
+   "Id": "LC",
+   "Iso2": "LC",
+   "DisplayNameEN": "Saint Lucia",
+   "DisplayNameRU": "Сент-Люсия",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇱🇨"
+  },
+  {
+   "Id": "VC",
+   "Iso2": "VC",
+   "DisplayNameEN": "Saint Vincent and the Grenadines",
+   "DisplayNameRU": "Сент-Винсент и Гренадины",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇻🇨"
+  },
+  {
+   "Id": "TT",
+   "Iso2": "TT",
+   "DisplayNameEN": "Trinidad and Tobago",
+   "DisplayNameRU": "Тринидад и Тобаго",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇹"
+  },
+  {
+   "Id": "US",
+   "Iso2": "US",
+   "DisplayNameEN": "United States",
+   "DisplayNameRU": "США",
+   "Continent": "North America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇺🇸"
+  },
+  {
+   "Id": "AR",
+   "Iso2": "AR",
+   "DisplayNameEN": "Argentina",
+   "DisplayNameRU": "Аргентина",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇷"
+  },
+  {
+   "Id": "BO",
+   "Iso2": "BO",
+   "DisplayNameEN": "Bolivia",
+   "DisplayNameRU": "Боливия",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇴"
+  },
+  {
+   "Id": "BR",
+   "Iso2": "BR",
+   "DisplayNameEN": "Brazil",
+   "DisplayNameRU": "Бразилия",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇧🇷"
+  },
+  {
+   "Id": "CL",
+   "Iso2": "CL",
+   "DisplayNameEN": "Chile",
+   "DisplayNameRU": "Чили",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇱"
+  },
+  {
+   "Id": "CO",
+   "Iso2": "CO",
+   "DisplayNameEN": "Colombia",
+   "DisplayNameRU": "Колумбия",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇨🇴"
+  },
+  {
+   "Id": "EC",
+   "Iso2": "EC",
+   "DisplayNameEN": "Ecuador",
+   "DisplayNameRU": "Эквадор",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇪🇨"
+  },
+  {
+   "Id": "GY",
+   "Iso2": "GY",
+   "DisplayNameEN": "Guyana",
+   "DisplayNameRU": "Гайана",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇬🇾"
+  },
+  {
+   "Id": "PY",
+   "Iso2": "PY",
+   "DisplayNameEN": "Paraguay",
+   "DisplayNameRU": "Парагвай",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇾"
+  },
+  {
+   "Id": "PE",
+   "Iso2": "PE",
+   "DisplayNameEN": "Peru",
+   "DisplayNameRU": "Перу",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇪"
+  },
+  {
+   "Id": "SR",
+   "Iso2": "SR",
+   "DisplayNameEN": "Suriname",
+   "DisplayNameRU": "Суринам",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇷"
+  },
+  {
+   "Id": "UY",
+   "Iso2": "UY",
+   "DisplayNameEN": "Uruguay",
+   "DisplayNameRU": "Уругвай",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇺🇾"
+  },
+  {
+   "Id": "VE",
+   "Iso2": "VE",
+   "DisplayNameEN": "Venezuela",
+   "DisplayNameRU": "Венесуэла",
+   "Continent": "South America",
+   "FlagAsset": "",
+   "EmojiFallback": "🇻🇪"
+  },
+  {
+   "Id": "AU",
+   "Iso2": "AU",
+   "DisplayNameEN": "Australia",
+   "DisplayNameRU": "Австралия",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇦🇺"
+  },
+  {
+   "Id": "FJ",
+   "Iso2": "FJ",
+   "DisplayNameEN": "Fiji",
+   "DisplayNameRU": "Фиджи",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇫🇯"
+  },
+  {
+   "Id": "KI",
+   "Iso2": "KI",
+   "DisplayNameEN": "Kiribati",
+   "DisplayNameRU": "Кирибати",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇰🇮"
+  },
+  {
+   "Id": "MH",
+   "Iso2": "MH",
+   "DisplayNameEN": "Marshall Islands",
+   "DisplayNameRU": "Маршалловы Острова",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇲🇭"
+  },
+  {
+   "Id": "FM",
+   "Iso2": "FM",
+   "DisplayNameEN": "Micronesia",
+   "DisplayNameRU": "Микронезия",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇫🇲"
+  },
+  {
+   "Id": "NR",
+   "Iso2": "NR",
+   "DisplayNameEN": "Nauru",
+   "DisplayNameRU": "Науру",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇷"
+  },
+  {
+   "Id": "NZ",
+   "Iso2": "NZ",
+   "DisplayNameEN": "New Zealand",
+   "DisplayNameRU": "Новая Зеландия",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇳🇿"
+  },
+  {
+   "Id": "PW",
+   "Iso2": "PW",
+   "DisplayNameEN": "Palau",
+   "DisplayNameRU": "Палау",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇼"
+  },
+  {
+   "Id": "PG",
+   "Iso2": "PG",
+   "DisplayNameEN": "Papua New Guinea",
+   "DisplayNameRU": "Папуа - Новая Гвинея",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇵🇬"
+  },
+  {
+   "Id": "WS",
+   "Iso2": "WS",
+   "DisplayNameEN": "Samoa",
+   "DisplayNameRU": "Самоа",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇼🇸"
+  },
+  {
+   "Id": "SB",
+   "Iso2": "SB",
+   "DisplayNameEN": "Solomon Islands",
+   "DisplayNameRU": "Соломоновы Острова",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇸🇧"
+  },
+  {
+   "Id": "TO",
+   "Iso2": "TO",
+   "DisplayNameEN": "Tonga",
+   "DisplayNameRU": "Тонга",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇴"
+  },
+  {
+   "Id": "TV",
+   "Iso2": "TV",
+   "DisplayNameEN": "Tuvalu",
+   "DisplayNameRU": "Тувалу",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇹🇻"
+  },
+  {
+   "Id": "VU",
+   "Iso2": "VU",
+   "DisplayNameEN": "Vanuatu",
+   "DisplayNameRU": "Вануату",
+   "Continent": "Oceania",
+   "FlagAsset": "",
+   "EmojiFallback": "🇻🇺"
+  }
+ ]
+}

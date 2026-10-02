@@ -1,0 +1,282 @@
+{
+  "SchemaVersion": 3,
+  "DataStoreName": "WarState_Slots_v1",
+  "DataStoreRetries": 3,
+  "AutosaveSeconds": 60,
+  "SlotCount": 3,
+  "Slots": [
+    {
+      "Index": 1,
+      "Unlocked": true,
+      "Label": "FREE"
+    },
+    {
+      "Index": 2,
+      "Unlocked": false,
+      "Label": "LOCKED"
+    },
+    {
+      "Index": 3,
+      "Unlocked": false,
+      "Label": "LOCKED"
+    }
+  ],
+  "CountryName": {
+    "MinLength": 3,
+    "MaxLength": 24
+  },
+  "Territory": {
+    "Size": 128,
+    "SurfaceY": 0,
+    "Thickness": 4,
+    "RimWidth": 14,
+    "MaxPlots": 6,
+    "BorderWidth": 0.4,
+    "Color": [
+      0.55,
+      0.74,
+      0.47
+    ],
+    "BorderColor": [
+      0.47,
+      0.66,
+      0.41
+    ],
+    "SandColor": [
+      0.93,
+      0.87,
+      0.72
+    ]
+  },
+  "Map": {
+    "Static": true,
+    "BaseY": -24,
+    "Terrain": {
+      "WaterTopY": -1,
+      "SeabedY": -24,
+      "HalfSize": 860,
+      "SeabedThickness": 8
+    },
+    "Boundary": {
+      "HalfSize": 720,
+      "Height": 180,
+      "Thickness": 4
+    },
+    "CentralIsland": {
+      "CenterX": 0,
+      "CenterZ": 0,
+      "Size": 520,
+      "BeachWidth": 22,
+      "PlazaRadius": 18,
+      "Color": [
+        0.58,
+        0.76,
+        0.5
+      ]
+    },
+    "BridgeWidth": 6,
+    "BridgeColor": [
+      0.78,
+      0.8,
+      0.82
+    ],
+    "BridgeRailColor": [
+      0.95,
+      0.96,
+      0.98
+    ],
+    "BridgeAsphaltColor": [
+      0.42,
+      0.44,
+      0.47
+    ],
+    "Plots": [
+      {
+        "Index": 1,
+        "CenterX": -200,
+        "CenterZ": -464,
+        "ExitSide": "S"
+      },
+      {
+        "Index": 2,
+        "CenterX": 200,
+        "CenterZ": -464,
+        "ExitSide": "S"
+      },
+      {
+        "Index": 3,
+        "CenterX": -464,
+        "CenterZ": 0,
+        "ExitSide": "E"
+      },
+      {
+        "Index": 4,
+        "CenterX": 464,
+        "CenterZ": 0,
+        "ExitSide": "W"
+      },
+      {
+        "Index": 5,
+        "CenterX": -200,
+        "CenterZ": 464,
+        "ExitSide": "N"
+      },
+      {
+        "Index": 6,
+        "CenterX": 200,
+        "CenterZ": 464,
+        "ExitSide": "N"
+      }
+    ],
+    "Decorations": {
+      "Trees": 80,
+      "Bushes": 70,
+      "Rocks": 40,
+      "Seed": 7,
+      "PathWidth": 3,
+      "PathColor": [
+        0.6,
+        0.47,
+        0.33
+      ]
+    },
+    "LobbySpawn": [
+      0,
+      1,
+      0
+    ]
+  },
+  "Population": {
+    "TickSeconds": 4,
+    "GrowthFraction": 0.15,
+    "MinGrowth": 1,
+    "WorkerRatio": 0.5
+  },
+  "Construction": {
+    "PlannedSeconds": 2,
+    "TickSeconds": 0.5,
+    "GhostTransparency": 0.8,
+    "ProgressBarMaxDistance": 140
+  },
+  "Utilities": {
+    "TickSeconds": 5,
+    "Shortage": {
+      "ProlongedSeconds": 60,
+      "ProblemsSeconds": 150,
+      "DecreaseSeconds": 240,
+      "DecreaseFraction": 0.05,
+      "RecoveryMultiplier": 2
+    }
+  },
+  "Economy": {
+    "ChargeCosts": true,
+    "Currency": "Treasury",
+    "CycleSeconds": 30,
+    "StartingTreasury": 0,
+    "AllowDebt": true,
+    "RoadTilesPerExpense": 10,
+    "RailTilesPerExpense": 10,
+    "UtilityPenalty": 0.5,
+    "_Note": "Treasury can drop below 0 (debt); anything that costs Treasury needs Treasury >= cost."
+  },
+  "Traffic": {
+    "IntervalSeconds": 60,
+    "CarSpeed": 8,
+    "MaxCarsPerWave": 12,
+    "LaneOffset": 0.38,
+    "CarLifetimeSeconds": 40
+  },
+  "Railway": {
+    "IntervalSeconds": 45,
+    "TrainSpeed": 10,
+    "WagonCapacity": 20,
+    "MaxWagons": 3,
+    "WagonSpacing": 1.9,
+    "StationRadius": 18,
+    "RailBonus": 0.25,
+    "FreightIncomePerWagon": 3,
+    "Track": {
+      "Id": "RailTrack",
+      "DisplayName": "Rail Track",
+      "Cost": {
+        "Treasury": 2
+      }
+    },
+    "Cargo": [
+      "Coal",
+      "IronOre",
+      "Oil",
+      "Steel",
+      "Fuel",
+      "Supplies"
+    ]
+  },
+  "Migration": {
+    "V1PositionScale": 0.25
+  },
+  "EmptyCountry": {
+    "Treasury": 0,
+    "Coal": 0,
+    "IronOre": 0,
+    "Oil": 0,
+    "Fuel": 0,
+    "Steel": 0,
+    "Supplies": 0,
+    "Population": 0,
+    "Workers": 0,
+    "HousingCapacity": 0,
+    "Buildings": {},
+    "Roads": {},
+    "Military": {},
+    "Infrastructure": {
+      "Water": {
+        "Stored": 0,
+        "Production": 0,
+        "Demand": 0
+      },
+      "Power": {
+        "Production": 0,
+        "Demand": 0
+      },
+      "Shortage": {
+        "Stage": "NORMAL",
+        "Seconds": 0
+      }
+    },
+    "LastPlotIndex": 0,
+    "Research": {
+      "Points": 0
+    },
+    "Railway": {
+      "Tracks": {}
+    },
+    "Economy": {
+      "Cycle": 0,
+      "LastIncome": 0,
+      "LastExpense": 0,
+      "LastNet": 0
+    }
+  },
+  "Resources": {
+    "Keys": [
+      "Coal",
+      "IronOre",
+      "Oil",
+      "Fuel",
+      "Steel",
+      "Supplies"
+    ],
+    "DisplayNames": {
+      "Coal": "Coal",
+      "IronOre": "Iron Ore",
+      "Oil": "Crude Oil",
+      "Fuel": "Fuel",
+      "Steel": "Steel",
+      "Supplies": "Supplies"
+    },
+    "BaseStorage": 60
+  },
+  "Research": {
+    "PointsPerLevel": 100
+  }
+}
