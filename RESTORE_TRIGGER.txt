@@ -1,0 +1,1 @@
+Automatic v0.4 checkpoint restore trigger. This file is intentionally temporary.
