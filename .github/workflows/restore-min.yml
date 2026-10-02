@@ -1,0 +1,10 @@
+name: Restore checkpoint
+
+on: [push]
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "restore workflow started"
