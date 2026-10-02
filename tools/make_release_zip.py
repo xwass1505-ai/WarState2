@@ -3,7 +3,7 @@
 
     python tools/make_release_zip.py [WarState_READY_BUILD.zip]
 
-Excluded: .git, dist/, old/nested WarState_READY_BUILD*.zip, __pycache__, *.pyc, ci_logs/.
+Excluded: .git, dist/, every *.zip (old WIP / nested release ZIPs, Rojo binary archive), __pycache__, *.pyc, ci_logs/.
 Fails if build/WarState.rbxlx is missing.
 """
 import sys
@@ -17,8 +17,8 @@ EXCLUDE_DIRS = {".git", "dist", "__pycache__", "ci_logs", ".venv", "node_modules
 def included(rel: Path) -> bool:
     if any(part in EXCLUDE_DIRS for part in rel.parts):
         return False
-    if rel.name.startswith("WarState_READY_BUILD") and rel.suffix == ".zip":
-        return False
+    if rel.suffix == ".zip":
+        return False  # no old WIP / nested / release ZIPs and no Rojo binary archive inside the release
     if rel.suffix == ".pyc" or rel.name.endswith(".rbxlx.lock"):
         return False
     return True
@@ -52,4 +52,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-

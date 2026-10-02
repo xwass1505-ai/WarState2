@@ -1,0 +1,78 @@
+{
+  "name": "WarState",
+  "servePort": 34872,
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "$ignoreUnknownInstances": true,
+      "Shared": { "$path": "src/ReplicatedStorage/Shared" },
+      "Remotes": {
+        "$className": "Folder",
+        "GetProfile": { "$className": "RemoteFunction" },
+        "CreateCountry": { "$className": "RemoteFunction" },
+        "LoadSlot": { "$className": "RemoteFunction" },
+        "DeleteSlot": { "$className": "RemoteFunction" },
+        "LeaveState": { "$className": "RemoteFunction" },
+        "SaveNow": { "$className": "RemoteFunction" },
+        "GetPlots": { "$className": "RemoteFunction" },
+        "ClaimPlot": { "$className": "RemoteFunction" },
+        "PlaceRoad": { "$className": "RemoteFunction" },
+        "PlaceRoadLine": { "$className": "RemoteFunction" },
+        "PlaceBuilding": { "$className": "RemoteFunction" },
+        "Demolish": { "$className": "RemoteFunction" },
+        "PlaceRailLine": { "$className": "RemoteFunction" },
+        "GetCityMap": { "$className": "RemoteFunction" },
+        "StateChanged": { "$className": "RemoteEvent" },
+        "PlotsChanged": { "$className": "RemoteEvent" },
+        "Notify": { "$className": "RemoteEvent" }
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$ignoreUnknownInstances": true,
+      "ServerMain": { "$path": "src/ServerScriptService/ServerMain.server.luau" },
+      "Systems": { "$path": "src/ServerScriptService/Systems" },
+      "Tests": { "$path": "src/ServerScriptService/Tests" }
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$ignoreUnknownInstances": true,
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "$ignoreUnknownInstances": true,
+        "ClientMain": { "$path": "src/StarterPlayer/StarterPlayerScripts/ClientMain.client.luau" },
+        "Controllers": { "$path": "src/StarterPlayer/StarterPlayerScripts/Controllers" }
+      }
+    },
+    "StarterGui": {
+      "$className": "StarterGui",
+      "$ignoreUnknownInstances": true,
+      "MainUI": {
+        "$className": "ScreenGui",
+        "$properties": { "ResetOnSpawn": false, "IgnoreGuiInset": false },
+        "Components": { "$path": "src/StarterGui/MainUI/Components" },
+        "Screens": { "$path": "src/StarterGui/MainUI/Screens" }
+      }
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "$ignoreUnknownInstances": true,
+      "Terrain": {
+        "$className": "Terrain",
+        "$properties": {
+          "WaterColor": { "Color3": [0.27, 0.6, 0.8] },
+          "WaterTransparency": 0.4,
+          "WaterWaveSize": 0.12,
+          "WaterWaveSpeed": 8,
+          "WaterReflectance": 0.5
+        }
+      },
+      "Map": { "$path": "src/Workspace/Map" },
+      "Buildings": { "$className": "Folder" },
+      "Roads": { "$className": "Folder" },
+      "Vehicles": { "$className": "Folder" },
+      "NPCs": { "$className": "Folder" }
+    }
+  }
+}

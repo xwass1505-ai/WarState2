@@ -39,4 +39,3 @@ if r.returncode != 0:
     sys.exit(r.returncode)
 r = subprocess.run([sys.executable, str(ROOT / "tools" / "gen_static_map.py"), "--check"], cwd=str(ROOT))
 sys.exit(r.returncode)
-

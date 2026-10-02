@@ -206,7 +206,11 @@ placementBar = PlacementBar.new(mainUI, {
 	end,
 })
 
-statsPanel = StatsPanel.new(mainUI)
+statsPanel = StatsPanel.new(mainUI, {
+	fetchCityMap = function()
+		return invoke(Constants.Remotes.GetCityMap)
+	end,
+})
 
 hud = HUD.new(mainUI, {
 	onOpenBuild = function()

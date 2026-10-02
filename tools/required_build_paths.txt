@@ -18,4 +18,18 @@ Workspace/Map/Plots/Plot_4/Ground
 Workspace/Map/Plots/Plot_5/Ground
 Workspace/Map/Plots/Plot_6/Ground
 Workspace/Map/Plots/Plot_6/Exit/Bridge
-
+# v0.4 (Phases 2-6): remotes + client screens/controllers
+ReplicatedStorage/Remotes/PlaceRailLine
+ReplicatedStorage/Remotes/GetCityMap
+ReplicatedStorage/Shared/Modules/EconomyRules
+ReplicatedStorage/Shared/Modules/ProductionRules
+ReplicatedStorage/Shared/Modules/TrafficRules
+ReplicatedStorage/Shared/Modules/RailGraph
+ReplicatedStorage/Shared/Modules/ExtraModels
+ServerScriptService/Systems/Railway/RailService
+ServerScriptService/Systems/Economy/EconomyService
+ServerScriptService/Systems/Vehicles/VehicleService
+ServerScriptService/Systems/Stats/StatsService
+StarterGui/MainUI/Screens/StatsPanel
+StarterGui/MainUI/Screens/BuildMenu
+StarterPlayer/StarterPlayerScripts/Controllers/PlacementController

@@ -1,0 +1,1 @@
+{"className":"Model","children":[{"name":"P","className":"Part","properties":{"Anchored":true,"Size":[4,1,4],"Color":[0.5,0.6,0.7],"Material":"Grass","CFrame":{"position":[1,2,3],"orientation":[[1,0,0],[0,1,0],[0,0,1]]}},"attributes":{"PlotIndex":1}}]}

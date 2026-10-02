@@ -1,0 +1,11 @@
+# Build outputs are produced by CI (real Rojo) and shipped in WarState_READY_BUILD.zip
+build/
+dist/
+ci_logs/
+WarState_READY_BUILD.zip
+__pycache__/
+*.pyc
+*.rbxlx.lock
+.rojo_bin/
+# Generated from GameConfig.json by tools/gen_static_map.py (CI prebuild, before rojo build)
+src/Workspace/Map/

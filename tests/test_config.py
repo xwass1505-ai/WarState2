@@ -54,15 +54,16 @@ class BuildingConfigTests(unittest.TestCase):
         self.models = read("src/ReplicatedStorage/Shared/Modules/BuildingModels.luau")
         self.extra_models = read("src/ReplicatedStorage/Shared/Modules/ExtraModels.luau")
 
-    def test_three_residential_types(self):
+    def test_residential_types(self):
         ids = [b["Id"] for b in self.buildings if b["Category"] == "Residential"]
         self.assertEqual(ids[:3], ["SmallHouse", "MediumHouse", "LargeHouse"])
         self.assertIn("Apartment", ids)
 
     def test_categories_exist_in_menu(self):
-        menu = {c["Id"] for c in load_json("BuildMenuConfig.json")["Categories"]}
+        menu = {c["Id"]: c for c in load_json("BuildMenuConfig.json")["Categories"]}
         for b in self.buildings:
             self.assertIn(b["MenuCategory"], menu, b["Id"])
+            self.assertIn(b["Category"], menu[b["MenuCategory"]]["Groups"], b["Id"])
 
     def test_building_fields(self):
         grid = self.placement["GridSize"]
@@ -86,7 +87,8 @@ class BuildingConfigTests(unittest.TestCase):
             self.assertLessEqual(b["ModelScale"], 0.25, b["Id"])
 
     def test_variants_exist_in_models(self):
-        defined = set(re.findall(r"^Variants\.(\w+) = function", self.models + "\n" + self.extra_models, re.M))
+        defined = set(re.findall(r"^Variants\.(\w+) = function", self.models, re.M))
+        defined |= set(re.findall(r"^Variants\.(\w+) = function", self.extra_models, re.M))
         for b in self.buildings:
             self.assertGreaterEqual(len(b["Variants"]), 4, b["Id"])
             for v in b["Variants"]:
@@ -141,14 +143,11 @@ class RoadAndPlacementTests(unittest.TestCase):
 
 class MenuAndTechTests(unittest.TestCase):
     def test_build_menu_categories(self):
-        menu = load_json("BuildMenuConfig.json")
-        cats = [c["Id"] for c in menu["Categories"]]
+        # Only three main categories; everything peaceful is CIVILIAN.
+        cats = [c["Id"] for c in load_json("BuildMenuConfig.json")["Categories"]]
         self.assertEqual(cats, ["CIVILIAN", "MILITARY", "RESEARCH"])
-        groups = {g for c in menu["Categories"] for g in c.get("Groups", [])}
-        for required in ("Roads", "Residential", "Business", "Utilities", "Resources", "Industry", "Storage", "Transport"):
-            self.assertIn(required, groups)
-        self.assertIn("Production", groups)
-        self.assertIn("Research", groups)
+        for forbidden in ("Business", "Industry", "Infrastructure", "Transport", "Utilities"):
+            self.assertNotIn(forbidden, cats)
 
     def test_technology_branches(self):
         branches = load_json("TechnologyConfig.json")["Branches"]

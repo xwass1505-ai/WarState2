@@ -3,6 +3,7 @@
 --   Road      : hold LMB / finger, drag, release. A transparent preview follows the cursor while
 --               held (grid snap + dominant direction + per-tile validation), release sends ONE
 --               PlaceRoadLine request. A single click never builds a road by itself.
+--   Rail      : same drag flow as Road (hold, drag, preview, release) -> ONE PlaceRailLine request.
 --   Building  : snapped preview + radius ring for water/power sources, click / Place to request.
 --   Demolish  : hover highlights your own building or road tile, click to request removal.
 -- Validation uses the SAME PlacementRules as the server. Work happens only while a mode is
@@ -120,7 +121,15 @@ local function buildContext(bounds)
 	if ctxCache and not ctxDirty and ctxCache.plot.index == bounds.index then
 		return ctxCache
 	end
-	local ctx = { plot = bounds, buildingRects = {}, roadCells = {}, buildingModels = {}, roadModels = {} }
+	local ctx = {
+		plot = bounds,
+		buildingRects = {}, -- buildings + rail tiles (block roads and buildings)
+		solidRects = {}, -- buildings only (blockers for rail drag)
+		roadCells = {},
+		railCells = {},
+		buildingModels = {},
+		roadModels = {},
+	}
 	local bFolder = plotFolder("Buildings", bounds)
 	local rFolder = plotFolder("Roads", bounds)
 	if bFolder then
@@ -129,6 +138,12 @@ local function buildContext(bounds)
 			if rect then
 				table.insert(ctx.buildingRects, rect)
 				table.insert(ctx.buildingModels, { model = model, rect = rect })
+				local ix, iz = model:GetAttribute("Ix"), model:GetAttribute("Iz")
+				if model:GetAttribute(Constants.Attributes.Kind) == Constants.Kinds.Rail and ix ~= nil and iz ~= nil then
+					ctx.railCells[GridMath.cellKey(ix, iz)] = rect
+				else
+					table.insert(ctx.solidRects, rect)
+				end
 			end
 		end
 	end
@@ -291,6 +306,10 @@ local function currentScreenPoint(): Vector2?
 end
 
 -- Mode updates -------------------------------------------------------------------------------
+local function isLineKind(kind): boolean
+	return kind == "Road" or kind == "Rail"
+end
+
 local function updateRoad(bounds, hit)
 	local ctx = buildContext(bounds)
 	local startX, startZ = hit.X, hit.Z
@@ -298,7 +317,17 @@ local function updateRoad(bounds, hit)
 		startX, startZ = active.dragStart.X, active.dragStart.Z
 	end
 	local cells = PlacementRules.roadLine(startX, startZ, hit.X, hit.Z, bounds)
-	local ok, reason, tiles, newCount = PlacementRules.validateRoadLine(cells, ctx)
+	local ok, reason, tiles, newCount
+	if active.kind == "Rail" then
+		ok, reason, tiles, newCount = PlacementRules.validateRailLine(cells, {
+			plot = ctx.plot,
+			buildingRects = ctx.solidRects,
+			roadCells = ctx.roadCells,
+			railCells = ctx.railCells,
+		})
+	else
+		ok, reason, tiles, newCount = PlacementRules.validateRoadLine(cells, ctx)
+	end
 	active.valid = ok
 	active.reason = ok and nil or reason
 	active.tiles = newCount
@@ -334,6 +363,8 @@ local function labelFor(model): string
 	local kind = model:GetAttribute(Constants.Attributes.Kind)
 	if kind == "Road" then
 		return "Road tile"
+	elseif kind == "Rail" then
+		return "Rail track"
 	end
 	local def = defsById[model:GetAttribute(Constants.Attributes.TypeId) or ""]
 	return def and def.DisplayName or "Building"
@@ -399,7 +430,7 @@ local function update()
 		return
 	end
 	-- Only recompute when the snapped cell (or rotation / drag state) changes.
-	local grid = active.kind == "Road" and PlacementConfig.RoadTileSize or PlacementConfig.GridSize
+	local grid = isLineKind(active.kind) and PlacementConfig.RoadTileSize or PlacementConfig.GridSize
 	local key = string.format(
 		"%d:%d:%d:%s",
 		math.floor((hit.X - bounds.minX) / grid),
@@ -412,7 +443,7 @@ local function update()
 	end
 	active.lastKey = key
 	active.lastHit = hit
-	if active.kind == "Road" then
+	if isLineKind(active.kind) then
 		updateRoad(bounds, hit)
 	elseif active.kind == "Building" then
 		updateBuilding(bounds, hit)
@@ -451,7 +482,7 @@ end
 
 -- Road drag release: build the previewed line.
 local function finishRoadDrag()
-	if not active or active.kind ~= "Road" or not active.dragging then
+	if not active or not isLineKind(active.kind) or not active.dragging then
 		return
 	end
 	active.dragging = false
@@ -466,7 +497,8 @@ local function finishRoadDrag()
 		emit()
 		return
 	end
-	invoke(Constants.Remotes.PlaceRoadLine, { StartX = start.X, StartZ = start.Z, EndX = finish.X, EndZ = finish.Z })
+	local remoteName = active.kind == "Rail" and Constants.Remotes.PlaceRailLine or Constants.Remotes.PlaceRoadLine
+	invoke(remoteName, { StartX = start.X, StartZ = start.Z, EndX = finish.X, EndZ = finish.Z })
 	hideTiles(1)
 	emit()
 end
@@ -509,7 +541,7 @@ function PlacementController.start(kind: string, id: string?)
 			else
 				aimScreen = nil
 			end
-			if active.kind == "Road" then
+			if isLineKind(active.kind) then
 				local b = plotBounds()
 				local point = currentScreenPoint()
 				local hit = (b and point) and raycastGround(point) or nil
@@ -533,14 +565,14 @@ function PlacementController.start(kind: string, id: string?)
 			return
 		end
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			if active.kind == "Road" and active.dragging then
+			if isLineKind(active.kind) and active.dragging then
 				update()
 				finishRoadDrag()
 			end
 		end
 	end))
 	table.insert(connections, UserInputService.TouchTapInWorld:Connect(function(position, processed)
-		if not processed and active and active.kind ~= "Road" then
+		if not processed and active and not isLineKind(active.kind) then
 			aimScreen = position
 		end
 	end))
@@ -586,7 +618,7 @@ function PlacementController.confirm(callback)
 	if not active or requesting then
 		return
 	end
-	if active.kind == "Road" then
+	if isLineKind(active.kind) then
 		return
 	end
 	if not active.valid then

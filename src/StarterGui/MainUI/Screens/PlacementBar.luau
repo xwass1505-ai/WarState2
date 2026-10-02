@@ -8,6 +8,7 @@ local UIKit = require(script.Parent.Parent:WaitForChild("Components"):WaitForChi
 local Config = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config")
 local BuildingConfig = require(Config:WaitForChild("BuildingConfig"))
 local RoadConfig = require(Config:WaitForChild("RoadConfig"))
+local GameConfig = require(Config:WaitForChild("GameConfig"))
 
 local C = UIKit.Theme.Colors
 local T = UIKit.Theme
@@ -20,6 +21,8 @@ local DESIGN_W, DESIGN_H = 460, 96
 local function displayName(kind, id)
 	if kind == "Demolish" then
 		return "Demolish"
+	elseif kind == "Rail" then
+		return GameConfig.Railway.Track.DisplayName
 	end
 	local list = kind == "Road" and RoadConfig.Types or BuildingConfig.Buildings
 	for _, entry in ipairs(list) do
@@ -128,8 +131,10 @@ function PlacementBar:update(status)
 	self.placeButton.Instance.Visible = kind == "Building"
 	if kind == "Road" then
 		self.hint.Text = "Hold left mouse (or finger) and drag · release to build"
+	elseif kind == "Rail" then
+		self.hint.Text = "Hold and drag to lay track · release to build · stations connect tracks"
 	elseif kind == "Demolish" then
-		self.hint.Text = "Click one of your buildings or road tiles to remove it"
+		self.hint.Text = "Click one of your buildings, road or rail tiles to remove it"
 	else
 		self.hint.Text = "Click to place · R rotate · Q done"
 	end
@@ -138,7 +143,7 @@ function PlacementBar:update(status)
 		self.styleButton.setText("Style " .. letter)
 	end
 	if status.Valid then
-		if kind == "Road" and status.Tiles then
+		if (kind == "Road" or kind == "Rail") and status.Tiles then
 			self.status.Text = string.format("%d new tile%s", status.Tiles, status.Tiles == 1 and "" or "s")
 		elseif kind == "Demolish" then
 			self.status.Text = status.TargetLabel or "Ready"

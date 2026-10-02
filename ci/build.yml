@@ -1,0 +1,134 @@
+name: WarState Build
+
+# Real Rojo 7.7.0 build pipeline.
+# checkout -> unpack rojo-7.7.0-windows-x86_64.zip (committed in the repo) -> rojo --version
+# -> rojo build default.project.json -o build/WarState.rbxlx -> verify build -> tests
+# -> WarState_READY_BUILD.zip -> workflow artifact (+ PR comment with the report).
+#
+# INSTALL: copy this file to .github/workflows/build.yml
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: warstate-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Real Rojo build + tests + ZIP
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Prepare logs
+        run: mkdir -p ci_logs
+
+      - name: Unpack real Rojo 7.7.0 from the repository ZIP
+        run: |
+          set -euo pipefail
+          test -f rojo-7.7.0-windows-x86_64.zip
+          python tools/ci_unpack_rojo.py rojo-7.7.0-windows-x86_64.zip .rojo_bin
+
+      - name: rojo --version
+        run: |
+          set -euo pipefail
+          rojo --version 2>&1 | tee ci_logs/rojo_version.txt
+          grep -q "7.7.0" ci_logs/rojo_version.txt
+
+      - name: Rojo format probes (diagnostic only, never used for the place)
+        continue-on-error: true
+        run: python tools/rojo_probe/run_probes.py 2>&1 | tee ci_logs/probe.txt
+
+      - name: Remove old build artifacts
+        run: |
+          rm -rf build dist WarState_READY_BUILD.zip
+          mkdir -p build
+          python -c "import time; open('ci_logs/build_start.txt','w').write(str(time.time()))"
+
+      - name: REAL Rojo build
+        run: |
+          set -o pipefail
+          rojo build default.project.json -o build/WarState.rbxlx 2>&1 | tee ci_logs/rojo_build.txt
+          code=${PIPESTATUS[0]}
+          echo "rojo build exit code: $code" | tee -a ci_logs/rojo_build.txt
+          exit $code
+
+      - name: Verify build file (exists, fresh, structure)
+        run: |
+          set -o pipefail
+          python tools/verify_build.py build/WarState.rbxlx ci_logs/build_start.txt 2>&1 | tee ci_logs/verify_build.txt
+
+      - name: Automated tests (Python, Luau static, structure, config, gameplay, security, rojo)
+        env:
+          WARSTATE_ROJO_BUILD: build/WarState.rbxlx
+        run: |
+          set -o pipefail
+          python -m unittest discover -s tests -t . -v 2>&1 | tee ci_logs/tests.txt
+
+      - name: Create WarState_READY_BUILD.zip
+        run: |
+          set -o pipefail
+          python tools/make_release_zip.py WarState_READY_BUILD.zip 2>&1 | tee ci_logs/zip.txt
+
+      - name: Upload artifact WarState_READY_BUILD
+        uses: actions/upload-artifact@v4
+        with:
+          name: WarState_READY_BUILD
+          path: WarState_READY_BUILD.zip
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload CI logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci_logs
+          path: ci_logs
+          retention-days: 14
+
+      - name: Report to pull request
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          JOB_STATUS: ${{ job.status }}
+        with:
+          script: |
+            const fs = require('fs');
+            const read = (f, n) => { try { const t = fs.readFileSync('ci_logs/' + f, 'utf8'); return t.split('\n').slice(-n).join('\n'); } catch (e) { return '(no log)'; } };
+            const tests = read('tests.txt', 400);
+            const ran = (tests.match(/Ran (\d+) tests?/) || [])[1] || '?';
+            const ok = /\nOK/.test(tests) && !/FAILED/.test(tests);
+            const failLines = tests.split('\n').filter(l => /^(FAIL|ERROR):/.test(l)).slice(0, 40).join('\n');
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = [
+              `### WarState CI: **${process.env.JOB_STATUS.toUpperCase()}**`,
+              `Commit: \`${context.sha.substring(0, 7)}\` · [workflow run](${runUrl}) · artifact: \`WarState_READY_BUILD\``,
+              '', '**Rojo version**', '```', read('rojo_version.txt', 5), '```',
+              '**Rojo build (tail)**', '```', read('rojo_build.txt', 40), '```',
+              '**Build verification**', '```', read('verify_build.txt', 40), '```',
+              `**Tests:** ran ${ran}, ${ok ? 'OK' : 'NOT OK'}`, '```', failLines || read('tests.txt', 30), '```',
+              '**ZIP**', '```', read('zip.txt', 15), '```',
+              '<details><summary>Rojo probes</summary>', '', '```', read('probe.txt', 200), '```', '</details>',
+            ].join('\n').substring(0, 60000);
+            const branch = context.ref.replace('refs/heads/', '');
+            const prs = await github.rest.pulls.list({ owner: context.repo.owner, repo: context.repo.repo, head: `${context.repo.owner}:${branch}`, state: 'open' });
+            for (const pr of prs.data) {
+              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: pr.number, body });
+            }
+            core.summary.addRaw(body); await core.summary.write();
